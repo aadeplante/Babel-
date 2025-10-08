@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente un poco más moderna */
+    background-color: #f4f7f6; /* Fondo un poco más suave */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bordes un poco más redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 700px; /* Ancho máximo un poco mayor para más botones */
+}
+
+h1 {
+    color: #2c3e50; /* Color de texto más oscuro para el título */
+    margin-bottom: 35px;
+    font-size: 2.5em; /* Título más grande */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Mayúsculas para el título */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Botones ligeramente más grandes */
+    gap: 18px; /* Espacio entre botones */
+}
+
+.button {
+    display: flex; /* Usar flexbox para centrar el texto verticalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 16px 12px;
+    background-color: #007bff; /* Azul vibrante */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px; /* Bordes de botón más redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Añadir transformación para efecto hover */
+    font-size: 1.1em;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para los botones */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: translateY(-2px); /* Ligeramente hacia arriba al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el ratón */
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) { /* Cambiado a 600px para una mejor transición */
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 25px;
+        letter-spacing: 1px;
+    }
+
+    .button-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 12px; /* Menos espacio entre botones en móviles */
+    }
+
+    .button {
+        font-size: 1.2em; /* Botones más grandes para facilitar el toque */
+        padding: 18px 15px;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media (max-width: 380px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    .button {
+        font-size: 1.1em;
+    }
+}
